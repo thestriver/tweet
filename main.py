@@ -25,7 +25,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/post_tweet/")
+@app.get("/post_tweet")
 async def post_tweet(sender: str, value: int, receiver: str, transaction_hash: str):
 
     status = f"New TX Alert 🚨🚨! {sender} sent {value} LOOPS to {receiver}! in transaction {transaction_hash}"
